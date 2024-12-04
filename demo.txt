@@ -1,0 +1,68 @@
+import streamlit as st
+
+# Inject CSS for white and navy blue theme
+st.markdown(
+    """
+    <style>
+    /* Set background color to white */
+    body {
+        background-color: white;
+        font-family: 'Arial', sans-serif;
+        color: #001F54; /* Navy Blue Text Color */
+    }
+
+    /* Header styling */
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+        color: #001F54; /* Navy Blue */
+        font-weight: bold;
+    }
+
+    /* Customize the sidebar */
+    .css-1d391kg {
+        background-color: #001F54; /* Navy Blue */
+        color: white;
+    }
+
+    /* Style buttons */
+    .stButton>button {
+        background-color: #001F54; /* Navy Blue */
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .stButton>button:hover {
+        background-color: #003366; /* Darker Navy Blue on hover */
+        color: #FFF;
+    }
+
+    /* Input boxes styling */
+    .stTextInput > div > input {
+        border: 1px solid #001F54; /* Navy border */
+        background-color: #f9f9f9; /* Light gray background */
+        color: #001F54; /* Navy text */
+    }
+
+    /* Custom title styling */
+    .title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #001F54;
+        margin-bottom: 1rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# App content
+st.markdown("<div class='title'>My Navy Blue & White Themed App</div>", unsafe_allow_html=True)
+
+st.write("Welcome to this Streamlit app with a white and navy blue theme!")
+
+# Add some interactive elements
+st.button("Submit")
+st.text_input("Enter your name:")
+st.sidebar.title("Sidebar")
+st.sidebar.write("This is a navy blue-themed sidebar.")
